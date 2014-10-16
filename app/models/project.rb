@@ -1,6 +1,4 @@
 class Project < ActiveRecord::Base
-
-	has_many :tickets, dependent: :delete_all
-
-	validates_presence_of :name
+  validates :name, presence: true
+  has_many :tickets, dependent: :delete_all
 end
