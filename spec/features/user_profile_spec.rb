@@ -15,7 +15,7 @@ feature "Editing Users" do
     user = FactoryGirl.create(:user)
 
     visit user_path(user)
-    click_link "Update Profile"
+    click_link "Edit Profile"
 
     fill_in "Username", with: "new_username"
     click_button "Update Profile"
